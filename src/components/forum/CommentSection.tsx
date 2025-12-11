@@ -228,7 +228,7 @@ export default function CommentSection({ postId, comments: initialComments, curr
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="font-semibold text-[#232829]">
-                      {comment.profiles?.full_name || comment.profiles?.email || 'Anonymous'}
+                      {comment.profiles?.full_name || 'Anonymous'}
                     </span>
                     <span className="text-sm text-[#5a605a] flex items-center gap-1">
                       <Clock className="h-3 w-3" />
