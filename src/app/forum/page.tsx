@@ -45,20 +45,20 @@ export default async function ForumPage() {
         </div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="animate-slideUp">
               <div className="flex items-center gap-3 mb-4">
-                <MessageSquare className="h-10 w-10 text-[#c49e4e] animate-float" />
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Community Forum</h1>
+                <MessageSquare className="h-8 w-8 md:h-10 md:w-10 text-[#c49e4e] animate-float" />
+                <h1 className="text-3xl md:text-4xl font-bold tracking-tight sm:text-5xl">Community Forum</h1>
               </div>
-              <p className="text-lg leading-8 text-[#bac1bf]">
+              <p className="text-base md:text-lg leading-8 text-[#bac1bf]">
                 Connect with fellow chess enthusiasts, share strategies, and discuss games
               </p>
             </div>
             {user && (
               <Link
                 href="/forum/new"
-                className="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-[#c49e4e] text-[#232829] rounded-lg font-semibold hover:bg-[#9e7642] hover:scale-105 hover:shadow-lg transition-all duration-300 animate-scaleIn delay-200"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#c49e4e] text-[#232829] rounded-lg font-semibold hover:bg-[#9e7642] hover:scale-105 hover:shadow-lg transition-all duration-300 animate-scaleIn delay-200 w-full md:w-auto whitespace-nowrap"
               >
                 <Plus className="h-5 w-5" />
                 New Discussion
@@ -67,19 +67,6 @@ export default async function ForumPage() {
           </div>
         </div>
       </section>
-
-      {/* Mobile Create Button */}
-      {user && (
-        <div className="md:hidden mx-auto max-w-7xl px-6 lg:px-8 -mt-6 mb-8">
-          <Link
-            href="/forum/new"
-            className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#c49e4e] text-[#232829] rounded-lg font-semibold hover:bg-[#9e7642] transition-colors shadow-lg"
-          >
-            <Plus className="h-5 w-5" />
-            New Discussion
-          </Link>
-        </div>
-      )}
 
       {/* Forum Posts */}
       <section className="py-24 bg-[#faf9f7]">

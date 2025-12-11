@@ -70,41 +70,43 @@ export default async function Home() {
             </p>
             
             {/* Quick Access Feature Buttons */}
-            <div className="mt-10 flex items-center justify-center gap-4 animate-slideUp delay-150">
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:flex lg:items-center lg:justify-center gap-3 sm:gap-4 max-w-4xl mx-auto animate-slideUp delay-150">
               <a
                 href="#puzzle"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap text-sm sm:text-base"
               >
-                <Trophy className="h-5 w-5" />
-                Daily Puzzle
+                <Trophy className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="hidden sm:inline">Daily Puzzle</span>
+                <span className="sm:hidden">Puzzle</span>
               </a>
               <a
                 href="#live-games"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap text-sm sm:text-base"
               >
-                <Users className="h-5 w-5" />
-                Live Games
+                <Users className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="hidden sm:inline">Live Games</span>
+                <span className="sm:hidden">Live</span>
               </a>
               <a
                 href="#articles"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap text-sm sm:text-base"
               >
-                <BookOpen className="h-5 w-5" />
-                Articles
+                <BookOpen className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>Articles</span>
               </a>
               <a
                 href="#forum"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap text-sm sm:text-base"
               >
-                <MessageSquare className="h-5 w-5" />
-                Forum
+                <MessageSquare className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>Forum</span>
               </a>
               <a
                 href="#news"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#232829]/80 text-[#c49e4e] rounded-lg font-semibold hover:bg-[#232829] hover:scale-105 transition-all duration-300 border border-[#c49e4e]/30 hover:border-[#c49e4e] whitespace-nowrap text-sm sm:text-base col-span-2 sm:col-span-1"
               >
-                <Newspaper className="h-5 w-5" />
-                News
+                <Newspaper className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>News</span>
               </a>
             </div>
             
