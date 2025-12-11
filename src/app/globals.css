@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+:root {
+  /* Smart Chess Academy Color Scheme */
+  --tussock: #c49e4e;
+  --outer-space: #232829;
+  --powder-ash: #bac1bf;
+  --shingle-fawn: #745832;
+  --metallic-bronze: #44321b;
+  --finlandia: #5a605a;
+  --cape-palliser: #9e7642;
+  
+  /* Semantic colors */
+  --primary: var(--tussock);
+  --primary-dark: var(--cape-palliser);
+  --secondary: var(--outer-space);
+  --accent: var(--shingle-fawn);
+  --text-primary: var(--outer-space);
+  --text-light: var(--finlandia);
+  --background: #ffffff;
+  --background-secondary: #faf9f7;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--tussock);
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.7s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(196, 158, 78, 0.3), transparent);
+  background-size: 1000px 100%;
+}
+
+.animate-spin-slow {
+  animation: rotate 10s linear infinite;
+}
+
+/* Staggered animation delays */
+.delay-100 {
+  animation-delay: 0.15s;
+}
+
+.delay-200 {
+  animation-delay: 0.3s;
+}
+
+.delay-300 {
+  animation-delay: 0.45s;
+}
+
+.delay-400 {
+  animation-delay: 0.6s;
+}
+
+.delay-500 {
+  animation-delay: 0.75s;
+}
+
+/* Initial state for animated elements - REMOVED to show immediately */
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(196, 158, 78, 0.25);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(196, 158, 78, 0.5);
+  transform: scale(1.05);
+}
+
+.hover-bounce:hover {
+  animation: float 0.6s ease-in-out;
+}
